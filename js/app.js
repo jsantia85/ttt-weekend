@@ -39,5 +39,12 @@ function init () {
   //console.log(winner)
   //3f. call render function at end of init function.
   render()
-  //console.log(render)
+  // console.log(render)
+}
+//4a. Create a function called render
+
+function render () {
+
+
+
 }
