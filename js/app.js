@@ -29,8 +29,8 @@ init()
 function init () {
   //console.log('sanity check')
   //3c. Set board varible to an arrary containing nine nulls to represent empty squares
-  board = [null, null, null, null, null, null, null, null, null]
-  //console.log(board)
+  board = [1, -1, null, null, null, null, null, null, null]
+  console.log(board)
   //3d. Set the turn to 1 which sill represent player X
   turn = 1
   //console.log(turn)
@@ -47,22 +47,23 @@ function render () {
   //4b.(1) loop over board and for each element: use the current index of the iteration to access the coressponding square in the squareEls array. 
   let sqIndex
 
-  squareEls.forEach(function(element, index){
+  board.forEach(function(element, index){
     //4b.(2) Style that square however you wish, dependent on the value contained in the current cell being iterated over (-1, 1, or null)
     // console.log(element)
     // console.log(index)
     //set up conditional that will determine what style to put
-    if (element.value === 1) {
-      element.textContent = "X"
+    sqIndex = squareEls[index]
+    if (element === 1) {
+      sqIndex.textContent = "X"
       return
-    } else if (element.value === -1) {
-      element.textContent = "O"
+    } else if (element === -1) {
+      sqIndex.textContent = "O"
       return
     } else {
       null
     }
   })
-  //4c. 
+  //4c. Render a message based on hte current game state
     if (winner === null) {
       //do something here
     } else if (winner === "T") {
