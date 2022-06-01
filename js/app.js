@@ -37,4 +37,7 @@ function init () {
   //3e. Set winner to null
   winner = null
   //console.log(winner)
+  //3f. call render function at end of init function.
+  render()
+  //console.log(render)
 }
