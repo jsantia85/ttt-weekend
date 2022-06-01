@@ -13,7 +13,7 @@ let winner;
 /*------------------------ Cached Element References ------------------------*/
 //2. Store cached element references.
 //2a. Constant used to store the nine elements representing the squares on the page.
-const squareEls = document.querySelectorAll("div.sqEl0, div.sqEl1, div.sqEl2, div.sqEl3, div.sqEl4, div.sqEl5, div.sqEl6, div.sqEl7, div.sqEl8")
+const squareEls = document.querySelectorAll("div.sq")
 //2b. store the element that displays the game's status on the page.
 const messageEl = document.querySelector("#message")
 /*----------------------------- Event Listeners -----------------------------*/
@@ -49,8 +49,18 @@ function render () {
 
   squareEls.forEach(function(element, index){
     //4b.(2) Style that square however you wish, dependent on the value contained in the current cell being iterated over (-1, 1, or null)
-    console.log(element)
-    console.log(index)
+    // console.log(element.value)
+    //console.log(index)
+    //set up conditional that will determine what style to put
+    if(element.value === 1) {
+      element.textContent = "X"
+      return
+    } else if (element.value === -1) {
+      element.textContent = "O"
+      return
+    } else {
+      return null
+    }
   })
 
 }
