@@ -30,7 +30,7 @@ function init () {
   //console.log('sanity check')
   //3c. Set board varible to an arrary containing nine nulls to represent empty squares
   board = [1, -1, null, null, null, null, null, null, null]
-  console.log(board)
+  // console.log(board)
   //3d. Set the turn to 1 which sill represent player X
   turn = 1
   //console.log(turn)
@@ -63,15 +63,13 @@ function render () {
       null
     }
   })
-  //4c. Render a message based on hte current game state
+  //4c. Render a message based on the current game state
     if (winner === null) {
-      //do something here
+      messageEl.textContent = `It is player ${turn}'s turn!`
     } else if (winner === "T") {
-      //do something here
-    } else if (winner === 1) {
-      //do something here
+      messageEl.textContent = `It's a tie!`
     } else {
-      //do something here
-    }  
+      messageEl.textContent = `Player ${winner} has won!`
+    }
 
 }
