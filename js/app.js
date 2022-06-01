@@ -1,5 +1,16 @@
 /*-------------------------------- Constants --------------------------------*/
-
+//5. Define required constants
+//5a. define the 8 possible winning combinations as an array of arrays
+const winningCombos = [
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  []
+];
 
 
 /*---------------------------- Variables (state) ----------------------------*/
