@@ -14,7 +14,8 @@ let winner;
 //2. Store cached element references.
 //2a. Constant used to store the nine elements representing the squares on the page.
 const squareEls = document.querySelectorAll("div.sqEl0, div.sqEl1, div.sqEl2, div.sqEl3, div.sqEl4, div.sqEl5, div.sqEl6, div.sqEl7, div.sqEl8")
-//2b.
+//2b. store the element that displays the game's status on the page.
+const messageEl = document.querySelector("#message")
 
 
 /*----------------------------- Event Listeners -----------------------------*/
