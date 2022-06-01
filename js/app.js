@@ -34,4 +34,7 @@ function init () {
   //3d. Set the turn to 1 which sill represent player X
   turn = 1
   //console.log(turn)
+  //3e. Set winner to null
+  winner = null
+  //console.log(winner)
 }
