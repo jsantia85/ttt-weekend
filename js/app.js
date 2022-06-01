@@ -27,6 +27,7 @@ const messageEl = document.querySelector("#message")
 init()
 
 function init () {
-  console.log('sanity check')
-
+  //console.log('sanity check')
+  board = [null, null, null, null, null, null, null, null, null]
+  //console.log(board)
 }
