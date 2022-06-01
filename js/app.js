@@ -49,18 +49,19 @@ function render () {
 
   squareEls.forEach(function(element, index){
     //4b.(2) Style that square however you wish, dependent on the value contained in the current cell being iterated over (-1, 1, or null)
-    // console.log(element.value)
-    //console.log(index)
+    // console.log(element)
+    // console.log(index)
     //set up conditional that will determine what style to put
-    if(element.value === 1) {
+    if (element.value === 1) {
       element.textContent = "X"
       return
     } else if (element.value === -1) {
       element.textContent = "O"
       return
     } else {
-      return null
+      null
     }
   })
+    
 
 }
