@@ -62,6 +62,15 @@ function render () {
       null
     }
   })
-    
+  //4c. 
+    if (winner === null) {
+      //do something here
+    } else if (winner === "T") {
+      //do something here
+    } else if (winner === 1) {
+      //do something here
+    } else {
+      //do something here
+    }  
 
 }
