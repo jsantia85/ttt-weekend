@@ -23,9 +23,10 @@ const messageEl = document.querySelector("#message")
 /*-------------------------------- Functions --------------------------------*/
 //3. Upon loading, the game state should be initialized, and a funciton should be called to render this game state
 //3a. Create init funciton
-
+//3b. Call the init funciton when app loads, sanity check works.
 init()
 
 function init () {
+  console.log('sanity check')
 
 }
