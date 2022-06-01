@@ -16,11 +16,16 @@ let winner;
 const squareEls = document.querySelectorAll("div.sqEl0, div.sqEl1, div.sqEl2, div.sqEl3, div.sqEl4, div.sqEl5, div.sqEl6, div.sqEl7, div.sqEl8")
 //2b. store the element that displays the game's status on the page.
 const messageEl = document.querySelector("#message")
-
-
 /*----------------------------- Event Listeners -----------------------------*/
 
 
 
 /*-------------------------------- Functions --------------------------------*/
+//3. Upon loading, the game state should be initialized, and a funciton should be called to render this game state
+//3a. Create init funciton
 
+init()
+
+function init () {
+
+}
