@@ -44,7 +44,13 @@ function init () {
 //4a. Create a function called render
 
 function render () {
+  //4b.(1) loop over board and for each element: use the current index of the iteration to access the coressponding square in the squareEls array. 
+  let sqIndex
 
-
+  squareEls.forEach(function(element, index){
+    //4b.(2) Style that square however you wish, dependent on the value contained in the current cell being iterated over (-1, 1, or null)
+    console.log(element)
+    console.log(index)
+  })
 
 }
