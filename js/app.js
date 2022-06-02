@@ -20,8 +20,15 @@ let winner;
 const squareEls = document.querySelectorAll("div.sq")
 //2b. store the element that displays the game's status on the page.
 const messageEl = document.querySelector("#message")
+//6b. Will need to create a new constant for the gameBoard
+const gameBoard = document.querySelector("section")
+// console.log(gameBoard)
 /*----------------------------- Event Listeners -----------------------------*/
+//6b. Add event listener to game board. On the 'click' event, it should call the candle click function. First, create gameboard and set it to the HTML element that has all the squares on the board.
 
+gameBoard.addEventListener("click", function(evt) {
+  handleClick()
+})
 
 
 /*-------------------------------- Functions --------------------------------*/
@@ -82,5 +89,5 @@ function render () {
 //6a. Create a function called handleClick, it will have an event parameter
 
 function handleClick () {
-  
+  console.log('hello')
 }
