@@ -87,8 +87,22 @@ function handleClick(evt) {
   // console.log(evt.target)
   // console.log(evt.target.id)
   // console.log(evt.target.id.substring(2))
-  let sqIdx = evt.target.id.substring(2)
-  board[sqIdx] = turn
+  //6c., 6d., 6e.,6g., 6h.
+  let sqIdx = evt.target.id.substring(2) 
+  if (board[(evt.target.id.substring(2))] !== null) {
+    return
+  } else if (winner !== null) {
+    return
+  } else {
+    board[sqIdx] = turn
+  }
   turn = turn * -1
+  getWinner()
   render()
+}
+
+//7. Build the getWinner function
+
+function getWinner () {
+  
 }
