@@ -2,7 +2,7 @@
 //5. Define required constants
 //5a. define the 8 possible winning combinations as an array of arrays
 const winningCombos = [
-  [[], [], [], [], [], [], [], []]
+  [[0, 1, 2], [0, 4, 8], [0, 3, 6], [3, 4, 5], [6, 7, 8], [1, 4, 7], [2, 5, 8], [2, 4, 6]]
 ];
 
 
