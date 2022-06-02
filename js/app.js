@@ -77,3 +77,10 @@ function render () {
     }
 
 }
+
+//6. Handle a player clicking a square with a handleClick function
+//6a. Create a function called handleClick, it will have an event parameter
+
+function handleClick () {
+  
+}
