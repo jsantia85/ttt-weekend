@@ -88,7 +88,7 @@ function playerName () {
   let name
 
   if (turn === 1) {
-    console.log('hello')
+    // console.log('hello')
     name = "X"
   } else if (turn === -1) {
     name = "O"
