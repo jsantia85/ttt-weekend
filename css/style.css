@@ -27,7 +27,12 @@ div {
 
 #reset-button {
   margin: 30px;
-  
+  background-color: black;
+  color: white;
+  font-family: 'Kdam Thmor Pro', sans-serif;
+  border-color: white;
+  min-height: 30px;
+  min-width: 120px;
 }
 
 #message {
