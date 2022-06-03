@@ -26,6 +26,8 @@ const resetBtnEl = document.querySelector("#reset-button")
 squareEls.forEach(square=> {
   square.addEventListener('click', handleClick)
 }) 
+//8c. Add event listener to reset button
+resetBtnEl.addEventListener('click', init)
 /*-------------------------------- Functions --------------------------------*/
 //3. Upon loading, the game state should be initialized, and a funciton should be called to render this game state
 //3a. Create init funciton
@@ -66,7 +68,7 @@ function render () {
       sqIndex.textContent = "O"
       return
     } else {
-      null
+      sqIndex.textContent = null
     }
   })
   //4c. Render a message based on the current game state
