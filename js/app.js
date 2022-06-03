@@ -73,13 +73,36 @@ function render () {
   })
   //4c. Render a message based on the current game state
     if (winner === null) {
-      messageEl.textContent = `It is player ${turn}'s turn!`
+      messageEl.textContent = "It is Player " + playerName() + "'s turn!"
     } else if (winner === "T") {
       messageEl.textContent = `It's a tie!`
     } else {
-      messageEl.textContent = `Player ${winner} has won!`
+      messageEl.textContent = "Player " + winnerName() + " has won!"
     }
 
+}
+
+//Function to register different players
+
+function playerName () {
+  let name
+
+  if (turn === 1) {
+    console.log('hello')
+    name = "X"
+  } else if (turn === -1) {
+    name = "O"
+  } return name
+}
+
+function winnerName () {
+  let winName
+
+  if (winner === 1) {
+    winName = "O"
+  } else if (winner === -1) {
+    winName = "X"
+  } return winName
 }
 
 //6. Handle a player clicking a square with a handleClick function
