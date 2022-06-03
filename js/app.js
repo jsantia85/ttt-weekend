@@ -2,7 +2,7 @@
 //5. Define required constants
 //5a. define the 8 possible winning combinations as an array of arrays
 const winningCombos = [
-  [[0, 1, 2], [0, 4, 8], [0, 3, 6], [3, 4, 5], [6, 7, 8], [1, 4, 7], [2, 5, 8], [2, 4, 6]]
+  [0, 1, 2], [0, 4, 8], [0, 3, 6], [3, 4, 5], [6, 7, 8], [1, 4, 7], [2, 5, 8], [2, 4, 6]
 ];
 
 /*---------------------------- Variables (state) ----------------------------*/
@@ -104,11 +104,18 @@ function handleClick(evt) {
 //7. Build the getWinner function
 
 function getWinner () {
+  //7b1., 7c., 7d.
+  console.log('board array:', board)
   winningCombos.forEach(combo => {
-    if(Math.abs(board[combo[0]] + board[combo[1]] + board[combo[2]] === 3)) {
+    if (Math.abs(board[combo[0]] + board[combo[1]] + board[combo[2]]) === 3) {
+      console.log('hello')
       winner = turn
-    } else if (!board.includes(null)){
-      winner = "T"
+    } else if (!board.includes(null)) {
+    console.log('yer')
+    winner = "T"
+    } else {
+      console.log('taco')
+      return null
     }
   })
 }
