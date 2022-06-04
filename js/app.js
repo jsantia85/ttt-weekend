@@ -106,9 +106,9 @@ function winnerName () {
   let winName
 
   if (winner === 1) {
-    winName = "O"
-  } else if (winner === -1) {
     winName = "X"
+  } else if (winner === -1) {
+    winName = "O"
   } return winName
 }
 
@@ -131,7 +131,7 @@ function handleClick(evt) {
     board[sqIdx] = turn
   }
   turn = turn * -1
-  getWinner()
+  winner = getWinner()
   render()
 }
 
@@ -154,6 +154,18 @@ function handleClick(evt) {
 //   })
 // }
 
-function getWinner() {
-  
+function getWinner () {
+  //7b1., 7c., 7d.
+  // console.log('board array:', board)
+  for (let i=0; i < winningCombos.length; i++) {
+    if (board[winningCombos[i][0]] + board[winningCombos[i][1]] + board[winningCombos[i][2]] === 3) {
+      return 1
+    } else  if (board[winningCombos[i][0]] + board[winningCombos[i][1]] + board[winningCombos[i][2]] === -3) {
+      return -1
+    }
+  }
+  if (!board.includes(null)){
+    return "T"
+  } 
+  return null
 }
