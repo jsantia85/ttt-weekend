@@ -137,23 +137,6 @@ function handleClick(evt) {
 
 //7. Build the getWinner function
 
-// function getWinner () {
-//   //7b1., 7c., 7d.
-//   console.log('board array:', board)
-//   winningCombos.forEach(combo => {
-//     if (Math.abs(board[combo[0]] + board[combo[1]] + board[combo[2]]) === 3) {
-//       console.log('hello')
-//       winner = turn
-//     } else if (!board.includes(null)) {
-//     console.log('yer')
-//     winner = "T"
-//     } else {
-//       console.log('taco')
-//       return null
-//     }
-//   })
-// }
-
 function getWinner () {
   //7b1., 7c., 7d.
   // console.log('board array:', board)
@@ -167,5 +150,5 @@ function getWinner () {
   if (!board.includes(null)){
     return "T"
   } 
-  return null
+return null
 }
