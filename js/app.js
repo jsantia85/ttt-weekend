@@ -42,19 +42,14 @@ resetBtnEl.addEventListener('click', init)
 init()
 
 function init () {
-  //console.log('sanity check')
   //3c. Set board varible to an arrary containing nine nulls to represent empty squares
   board = [null, null, null, null, null, null, null, null, null]
-  // console.log(board)
   //3d. Set the turn to 1 which sill represent player X
   turn = 1
-  //console.log(turn)
   //3e. Set winner to null
   winner = null
-  //console.log(winner)
   //3f. call render function at end of init function.
   render()
-  // console.log(render)
 }
 //4a. Create a function called render
 
@@ -64,8 +59,6 @@ function render () {
 
   board.forEach(function(element, index){
     //4b.(2) Style that square however you wish, dependent on the value contained in the current cell being iterated over (-1, 1, or null)
-    // console.log(element)
-    // console.log(index)
     //set up conditional that will determine what style to put
     sqIndex = squareEls[index]
     if (element === 1) {
@@ -95,7 +88,6 @@ function playerName () {
   let name
 
   if (turn === 1) {
-    // console.log('hello')
     name = "X"
   } else if (turn === -1) {
     name = "O"
@@ -116,11 +108,6 @@ function winnerName () {
 //6a. Create a function called handleClick, it will have an event parameter
 
 function handleClick(evt) {
-  // console.log('called handleClick')
-  // console.log(evt)
-  // console.log(evt.target)
-  // console.log(evt.target.id)
-  // console.log(evt.target.id.substring(2))
   //6c., 6d., 6e.,6g., 6h.
   let sqIdx = evt.target.id.substring(2) 
   if (board[(evt.target.id.substring(2))] !== null) {
@@ -139,7 +126,6 @@ function handleClick(evt) {
 
 function getWinner () {
   //7b1., 7c., 7d.
-  // console.log('board array:', board)
   for (let i=0; i < winningCombos.length; i++) {
     if (board[winningCombos[i][0]] + board[winningCombos[i][1]] + board[winningCombos[i][2]] === 3) {
       return 1
